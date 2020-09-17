@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -23,10 +24,11 @@ h1 {
 h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    padding: 1rem;
     opacity: 80%;
-    border-bottom: #43d8c9 2px solid;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
 }
+
 
 /* Kategorier  */
 article {
@@ -39,3 +41,27 @@ article {
 article:hover {
     background-color: #43d8c9;
 }
+
+#plantlist {
+    width: 100vw;
+}
+
+#plantDetails {
+    width: 100vw;
+}
+
+i {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.buttonDiv {
+    display: flex;
+}
+
+
+a {
+    color: #43d8c9;
+}
+

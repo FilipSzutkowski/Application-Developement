@@ -9,8 +9,13 @@ async function loadData() {
 
     kategorierObj.forEach(item => {
         let kategoriElm = document.createElement('article');
+
         kategoriElm.classList.add('kategori');
         kategoriElm.textContent = item.kategori;
+        kategoriElm.onclick = () => {
+            localStorage.setItem('plantData', item.kategori);
+            location.href = 'plantlist.html';
+        };
         kategorier.appendChild(kategoriElm);
     })
 }
