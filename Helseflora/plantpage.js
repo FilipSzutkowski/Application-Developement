@@ -145,4 +145,22 @@ class PlantDetails extends HTMLElement {
         this.shadowRoot.querySelector('#pris').textContent = `${this.getAttribute('pris')} kr.-`;
     }
 
+    connectedCallback() {
+        this.shadowRoot.querySelector('i').onclick = e => {
+            let cartItem = { 'price': this.attributes.pris.value, 'name': localStorage.getItem('plantName') };
+
+            if (localStorage.getItem('cartItems') === null) {
+                localStorage.setItem('cartItems', `[${JSON.stringify(cartItem)}]`);
+            } else if (localStorage.getItem('cartItems').includes(cartItem.name)) {
+                return; 
+            } else {
+                localStorage.setItem('cartItems', `${localStorage.getItem('cartItems').replace(']', ', ')}${JSON.stringify(cartItem)}]`);
+            }
+            
+            
+            
+            console.log(localStorage.getItem('cartItems'));
+        }
+    }
+
 }

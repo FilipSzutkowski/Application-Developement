@@ -61,7 +61,48 @@ i {
 }
 
 
-a {
+.buttonDiv>a {
     color: #43d8c9;
 }
+
+.buttonDiv>h3 {
+    flex-grow: 2;
+}
+
+.cart {
+    margin-right: 2em;
+}
+
+.cart>i {
+    font-size: 1.6rem;
+}
+
+#cartItems>article {
+    display: flex;
+}
+
+#cartItems>article h3 {
+    padding: 0;
+    flex-grow: 2;
+    font-weight: 300;
+}
+
+#cartItems>article p {
+    font-size: 1.5rem;
+}
+
+#cartItems>article input {
+    max-width: 2rem;
+    margin-right: 1em;
+    border: 1px #43d8c9 solid;
+    text-align: center;
+}
+
+#cartItems>article input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button  {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
 
